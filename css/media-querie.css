@@ -1,0 +1,11 @@
+	/*#E63946 rojo
+	#F1FAEE blanco
+	#A8DADC  azulcielo
+	#457B9D azulreina
+	#1D3557 azulespacial*/
+
+
+body{
+	background: #A8DADC;
+	border: 10px solid #1D3557;
+}

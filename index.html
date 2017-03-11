@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rex-TI - Soluciones Tecnologicas</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="css/style.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Allerta" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!-- <link rel="stylesheet" media="(max-width: 800px)" href="css/media-querie.css"/> -->
+	</head>
+	<body>
+		<section id="portada" class="portada background"><!--portada-->
+			<header id="header" class="header contenedor"> <!-- header-->
+				<figure class="logotipo"> <!--logotipo-->
+					<img src="images/LogoRexTI.png" srcset="images/LogoRexTI.png 1x, images/LogoRexTI_2x.png 2x" width="200"  alt="RexSoft logotipo" />
+				</figure>
+				<span class="burguer-button icon-menu" id="burguer-button"></span>
+				<nav class="menu" id="menu"> <!--menu-->
+					<ul>
+						<li>
+							<a href="index.html">Home</a>
+						</li>	
+						<li>
+							<a href="index.html#inicio-paquetes">Paquetes</a>
+						</li>
+						<li>
+							<a href="precios.html">Precios</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<div class="contenedor">
+				<h1 class="titulo">Soluciones <span>Rex</span>-TI</h1> <!--titulo-->
+				<h3 class="title-a">La mejor Solución para tu Negocio</h3> <!--soluciones-->
+				<a class="button" href="#inicio-paquetes">Conoce más</a><!--boton-->
+			</div>
+		</section>
+		<section id="paquetes" class="paquetes contenedor"><!--paquetes-->
+			<h2>¿Por qué las empresas necesitan estar en Internet?</h2>
+			<div class="video-demo-contenedor">
+				<div class="video-demo">
+					<div class="video-responsive-contenedor">
+						<iframe class="video-responsive-src" width="560" height="315" src="https://www.youtube.com/embed/CoJvt7HrYUE" frameborder="0" allowfullscreen></iframe>
+					</div>	
+				</div>	
+			</div>
+			<!--<br/>
+			<br/>-->
+			<h2 id="inicio-paquetes">Paquetes</h2> <!--titulo-->
+			<article  class="paquete1"><!--paquete 1-->
+				<img  class="derecha" data-src="images/paquete-2.png|images/paquete-2_2x.png" width="180" alt="Paquete Basico" />
+				<div class="contenedor-paquete-1">
+				<h3 class="title-b">Básico</h3>
+					<ol>
+						<li>Dominio gratis</li>
+						<li>Hosting gratis</li>
+						<li>Página web con 4 secciones</li>
+					</ol>
+				</div>
+			</article>
+			<article class="paquete1 b"> <!--paquete 2-->
+				<img class="izquierda" data-src="images/paquete-3.png|images/paquete-3_2x.png" width="250" alt="Paquete Negocios" />
+				<div class="contenedor-paquete-2">
+				<h3 class="title-b">Negocios</h3>
+				<ol>
+					<li>Hosting y Dominio gratis</li>
+					<li>Página web</li>
+					<li>10 cuentas de correo
+				</ol>
+				</div>
+			</article> 
+			<article class="paquete1"><!--paquete 1-->
+				<img  class="derecha-b" data-src="images/paquete-1.png|images/paquete-1_2x.png" width="300" alt="Paquete Profesional" />
+				<div class="contenedor-paquete-1">
+				<h3 class="title-b">Profesional</h3>
+					<ol>
+						<li>Hosting y Dominio 2 años</li>
+						<li>Dos Formularios</li>
+						<li>Página web Profesional</li>
+					</ol>
+				</div>
+			</article>
+		</section>
+		<footer class="footer">
+			<div class="contenedor">
+					<div class="contacto">
+						<img data-src="images/LogoRexTI.png|images/LogoRexTI_2x.png" width="250" alt="logotipo blanco"/>
+						<a href="tel:+557444486755"><strong>Teléfono</strong> <span>744486799</span></a>
+						<a href="mailto:contacto@rexsoft.com"><strong>E-mail</strong> <span>contacto@rexsoft.com</span></a>
+					</div>
+					<form class="formulario">
+						<div class="col1">
+							<label for="nombre">Nombre</label>
+							<input type="text"  required name="nombre" id="nombre" />
+							<label for="mail">E-mail</label>
+							<input type="email" required name="email" id="email" />
+							<div class="sexo">
+								<label for="mujer">
+									<input type="radio"  checked name="sexo" id="mujer" value="mujer" /> Mujer
+								</label>
+								<label for="hombre">
+									<input type="radio" name="sexo" id="hombre" value="hombre" /> Hombre
+								</label>
+							</div>
+							<div class="intereses">
+								<label for="cotizacion">
+									<input type="checkbox" checked name="intereses" id="cotizacion" value="cotizacion"/> Cotización
+								</label>
+								<label for="reclamos">
+									<input type="checkbox" name="intereses" id="reclamos" value="reclamos"/> Reclamos
+								</label>
+								<label for="comentarios">
+									<input type="checkbox" name="intereses" id="comentarios" value="comentarios"/> Comentarios
+								</label>
+								<label for="otros">
+									<input type="checkbox" name="intereses" id="otros" value="otros"/> Otros
+								</label>
+							</div>
+						</div>
+						<div class="col2">
+							<label for="asunto">Comentarios</label>
+							<textarea name="" id="asunto" cols="30" rows="7"></textarea>
+							<input class="button" type="submit" value="Enviar" name="enviar" id="enviar" />
+						</div>
+					</form>
+			</div>
+		</footer>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
+		<script>
+			//media querys Menu
+			var $consulta = window.matchMedia('(max-width: 500px)');
+			var $burguerButton = document.getElementById('burguer-button');	
+			//$burguerButton.addEventListener(que evento, que queremos hacer);
+			var $menu = document.getElementById('menu');
+			$consulta.addListener(mediaQuery);
+
+			mediaQuery();
+
+			function toggleMenu(){
+					$menu.classList.toggle('active');
+					//$burguerButton.classList.toggle('icon-close')
+			};
+
+			function showMenu(){
+					$menu.classList.add('active');
+			};
+
+			function hideMenu(){
+					$menu.classList.remove('active');
+			};
+
+
+			function mediaQuery(){
+				if($consulta.matches) {
+					console.log('se cumplio condicion');
+					$burguerButton.addEventListener('touchstart', toggleMenu);
+				} else {
+					console.log('No se cumplio condicion');
+					$burguerButton.removeEventListener('touchstart', toggleMenu);
+				}
+			}
+
+			//lazy loading
+			var bLazy = new Blazy({
+    		// options
+    		selector: 'img' 
+			});
+
+			//gestos touch
+		  var $body = document.body;
+
+			var gestos = new Hammer($body);
+			gestos.on('swipeleft', hideMenu);
+
+			gestos.on('swiperight', showMenu);
+			
+		</script>
+	</body>
+</html>

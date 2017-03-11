@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Precios | Rex-TI - Soluciones Tecnologicas</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="css/style.css" />
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Allerta" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	</head>
+	<body class="precios">
+		<header id="header" class="header background"> <!-- header-->
+			<div class="contenedor">
+				<figure class="logotipo"> <!--logotipo-->
+					<img src="images/LogoRexTI.png" width="250" alt="RexSoft logotipo" />
+				</figure>
+				<span class="burguer-button icon-menu" id="burguer-button"></span>
+				<nav class="menu" id="menu"> <!--menu-->
+					<ul>
+						<li>
+							<a href="index.html">Home</a>
+						</li>	
+						<li>
+							<a href="index.html#inicio-paquetes">Paquetes</a>
+						</li>
+						<li>
+							<a href="precios.html">Precios</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<section class="tabla">
+			<div class="contenedor">
+				<table>
+					<thead>
+						<tr>
+						  <th>Paquete</th>
+						  <th>Precio</th>
+						  <th>Drescripción</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Básico</td>
+							<td>$4,500.mxn</td>
+							<td>Si eres un aprendiz o quieres iniciarte en el mundo de la web</td>
+						</tr>
+						<tr>
+							<td>Negocio</td>
+							<td>$8,00.mxn</td>
+							<td>Ideal si quieres aunmentar tus ventas y estar en contacto con tus clientes</td>
+						</tr>
+						<tr>
+							<td>Profesional</td>
+							<td>$14,200.mxn</td>
+							<td>Si necesitas todas las herramientas, maximizar tus ventas y la relación con tus clientes</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+		<footer class="footer">
+			<div class="contenedor">
+					<div class="contacto">
+						<img src="images/LogoRexTI.png" width="250" alt="logotipo blanco"/>
+						<a href="tel:+557444486755"><strong>Teléfono</strong> <span>744486799</span></a>
+						<a href="mailto:contacto@rexsoft.com"><strong>E-mail</strong> <span>contacto@rexsoft.com</span></a>
+					</div>
+					<form class="formulario">
+						<div class="col1">
+							<label for="nombre">Nombre</label>
+							<input type="text"  required name="nombre" id="nombre" />
+							<label for="mail">E-mail</label>
+							<input type="email" required name="email" id="email" />
+							<div class="sexo">
+								<label for="mujer">
+									<input type="radio"  checked name="sexo" id="mujer" value="mujer" /> Mujer
+								</label>
+								<label for="hombre">
+									<input type="radio" name="sexo" id="hombre" value="hombre" /> Hombre
+								</label>
+							</div>
+							<div class="intereses">
+								<label for="cotizacion">
+									<input type="checkbox" checked name="intereses" id="cotizacion" value="cotizacion"/> Cotización
+								</label>
+								<label for="reclamos">
+									<input type="checkbox" name="intereses" id="reclamos" value="reclamos"/> Reclamos
+								</label>
+								<label for="comentarios">
+									<input type="checkbox" name="intereses" id="comentarios" value="comentarios"/> Comentarios
+								</label>
+								<label for="otros">
+									<input type="checkbox" name="intereses" id="otros" value="otros"/> Otros
+								</label>
+							</div>
+						</div>
+						<div class="col2">
+							<label for="asunto">Comentarios</label>
+							<textarea name="" id="asunto" cols="30" rows="7"></textarea>
+							<input class="button" type="submit" value="Enviar" name="enviar" id="enviar" />
+						</div>
+					</form>
+			</div>
+		</footer>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
+		<script>
+			//media querys Menu
+			var $consulta = window.matchMedia('(max-width: 500px)');
+			var $burguerButton = document.getElementById('burguer-button');	
+			//$burguerButton.addEventListener(que evento, que queremos hacer);
+			var $menu = document.getElementById('menu');
+			$consulta.addListener(mediaQuery);
+
+			mediaQuery();
+
+			function toggleMenu(){
+					$menu.classList.toggle('active');
+			};
+
+			function showMenu(){
+					$menu.classList.add('active');
+			};
+
+			function hideMenu(){
+					$menu.classList.remove('active');
+			};
+
+
+			function mediaQuery(){
+				if($consulta.matches) {
+					console.log('se cumplio condicion');
+					$burguerButton.addEventListener('touchstart', toggleMenu);
+				} else {
+					console.log('No se cumplio condicion');
+					$burguerButton.removeEventListener('touchstart', toggleMenu);
+				}
+			}
+
+			//lazy loading
+			var bLazy = new Blazy({
+    		// options
+    		selector: 'img' 
+			});
+
+			//gestos touch
+		  var $body = document.body;
+
+			var gestos = new Hammer($body);
+			gestos.on('swipeleft', hideMenu);
+
+			gestos.on('swiperight', showMenu);
+			
+		</script>
+	</body>
+</html>
