@@ -628,9 +628,6 @@ input:focus, textarea:focus{
 @media screen and(-webkit-min-device-pixel-ratio: 2){
 	.background{
 	background-image: url('../images/blackground-3_2x.jpg');
-	/*background-position: center;*/
-	background-size: cover;
-	/*background-repeat: no-repeat;*/
 	}
 	
 }
