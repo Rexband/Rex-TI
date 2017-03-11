@@ -380,7 +380,7 @@ input:focus, textarea:focus{
 
 	.portada{
 		/*height: auto;*/
-		height: all;
+		height: 620px;
 	}
 
 	.portada .button{
